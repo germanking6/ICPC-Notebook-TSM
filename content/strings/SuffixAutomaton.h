@@ -13,11 +13,10 @@
  *  2. Number of occurrences of a substr:
  *     - Initially, in extend: cnt[cur] = 1; cnt[clone] = 0;
  *     - Sort order by decreasing len
- *     - for (p in order)
- *         cnt[link[p.second]] += cnt[p.second]
+ *     - for (p in order) cnt[link[p.second]] += cnt[p.second]
  *  3. Find total length of different substrings:
  *     - We have f[u] = number of strings starting from node u
- *     - ans[u] = sum(ans[v] + d[v]) for v in nxt[u]
+ *     - ans[u] = sum(ans[v] + f[v]) for v in nxt[u]
  *  4. Lexicographically k-th substring
  *     - Based on number of different substring
  *  5. Smallest cyclic shift
